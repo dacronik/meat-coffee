@@ -1,0 +1,107 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: "Cabin", "Lobster";
+    background-color: #ffffff;
+}
+/* Configuracion de navbar*/
+.navbar {
+    background-color: #000000; 
+     
+}
+
+.navbar-brand img {
+    color: #ffffff !important;
+    filter: invert(100%);   
+}
+
+.nav-item {
+    font-size: 16pt;
+    font-family: "Cabin,Regular";
+}
+
+#navbarNav ul li a {
+    font-size: 1.5em;
+    color: #ffffff;
+    display: block;
+    padding: 0.5rem 1rem;   
+}
+    #navbarNav ul li a:hover{
+        background: #a4452c;
+        border-radius: 5%;
+    }
+
+/* Imagen Principal*/
+
+.imagen-principal{
+    background-image: url(../img/bg-hero.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 15em;
+    font-family: Open sans-serif;
+    text-shadow: 0px 3px 6px black;
+    text-align: right;
+    color: #ffffff; 
+      
+}
+
+.imagen-principal h1 {
+    font-size: 80px;
+    
+    
+}
+
+.imagen-principal h3 {
+    font-size: 40px;
+    font-weight: lighter;
+
+}
+
+#medio {
+    padding: 80px;
+    text-align: center;
+}
+
+#Proxima-Charla {
+    background: #a4452c;
+    padding: 100px;
+    color: white;
+}
+.wrapper img {
+    width: 25%;
+}
+
+.wrapper .texto {
+    width: 70%;
+    margin-left: 4%;
+}
+
+
+.wrapper img, .texto {
+    display: inline-block;
+    
+    vertical-align: middle;
+}
+
+/*Cards*/
+.card:hover {
+    transform: scale(1.1);
+    box-shadow: 13px 15px 37px black;
+}
+
+/*Footer*/
+
+footer {
+    font-family: "Open Sans", sans-serif;
+    text-align: center;
+    background: #000f08;
+    color: white;
+    padding: 20px;
+}
+
+.icon a {
+    text-decoration: none;
+    padding: 0.5rem;
+    
+}
