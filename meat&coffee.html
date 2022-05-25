@@ -37,9 +37,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
               <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#"
-                    >Ubicación</a
-                  >
+                  <a class="nav-link active" aria-current="page" href="#">Ubicación</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="#Proxima-Charla">Próxima Charla</a>
@@ -170,5 +168,10 @@
       crossorigin="anonymous"
     ></script>
     <script src="assets/js/scripts.js"></script> 
+    <script>
+      $('.navbar-nav>li>a').on('click', function(){
+          $('.navbar-collapse').collapse('hide');
+      });
+  </script>
 </body>
 </html>
