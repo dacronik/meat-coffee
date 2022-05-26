@@ -30,14 +30,13 @@
               data-bs-target="#navbarNav"
               aria-controls="navbarNav"
               aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
+              aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
               <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#">Ubicación</a>
+                  <a class="nav-link" aria-current="page" href="#imagen-principal">Ubicación</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="#Proxima-Charla">Próxima Charla</a>
@@ -56,7 +55,7 @@
 
       <!--Imagen Principal-->
 
-      <section class="imagen-principal">
+      <section class="imagen-principal" id="imagen-principal">
           <h1>Descubre lo último en tecnología bebiendo café</h1>
           <h3>Charlas, eventos y simposios sobre tecnología</h3>
       </section>
@@ -72,22 +71,30 @@
 
     
     <section id="Proxima-Charla">
-        <div class="wrapper">
-            <img src="assets/img/speaker.jpg" />
-            <div class="texto">
-                <h3>Próxima charla</h3>
-                <h4>Big Data para Noobs</h4>
-                <h6>Big Data para Noobs</h6>
-                <span>
+          <div class="card-charla sm-12 mb-6">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="assets/img/speaker.jpg" class="img-fluid rounded-start" alt="Hablar">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h2>Próxima charla</h2>
+                  <h3>Big Data para Noobs</h3>
+                  <h4>Big Data para Noobs</h4>
+                  <span>
                     Data Scientist, PhD Theoretical, Carneige Mellon University.
-                </span>
-                <p>
+                  </span>
+                  <p>
                     En esta charla revisaremos las técnicas y tecnologías que hacen
                     que se económico hacer frente a los datos a una escala extrema.
-                </p>
+                  </p>
+                </div>
+              </div>
             </div>
-        </div>
+          </div>
     </section>
+
+
     <section id="Eventos-anteriores" class="py-5 col-sm-12">
       <div>
         <h2 class="text-center mt-2 text-black">Eventos Anteriores</h2>
@@ -167,7 +174,28 @@
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
       crossorigin="anonymous"
     ></script>
-    <script src="assets/js/scripts.js"></script> 
+    <script src="assets/js/script.js"></script> 
+
+    <script>
+      $(document).ready(function(){
+        $("a").on('click', function(event) {
+          if (this.hash !== ".nav-link") {
+            event.preventDefault();
+            var hash = this.hash;
+
+            $('html, body').animate({
+              scrollTop: $(hash).offset().top
+            }, 800, function(){
+
+            window.location.hash = hash;
+            });
+          }
+        });
+      });
+      </script>
+      
+
+    <!--Navbar colapse-->
     <script>
       $('.navbar-nav>li>a').on('click', function(){
           $('.navbar-collapse').collapse('hide');

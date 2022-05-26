@@ -66,22 +66,23 @@ body {
 #Proxima-Charla {
     background: #a4452c;
     padding: 100px;
-    color: white;
-}
-.wrapper img {
-    width: 25%;
-}
-
-.wrapper .texto {
-    width: 70%;
-    margin-left: 4%;
-}
-
-
-.wrapper img, .texto {
-    display: inline-block;
     
-    vertical-align: middle;
+}
+.card-body {
+    background: #a4452c;
+    border: 0;
+    margin: 0;
+    padding: auto;
+    color: #ffffff;
+    font-family: "Cabin";
+
+}
+
+.card-charla{
+    align-items: center;
+}
+.img-fluid {
+    width: 100%;
 }
 
 /*Cards*/
